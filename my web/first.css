@@ -1,0 +1,81 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Dark text for contrast */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center; /* Center the header content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+#projects {
+  text-align: center; /* Center the project section content */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff; /* White project cards */
+  text-align: left; /* Align project text to the left */
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.view-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
