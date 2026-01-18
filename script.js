@@ -298,6 +298,19 @@
     });
   });
 
+  // Mail link - Open message dialog
+  const mailLink = document.getElementById('mailLink');
+  if (mailLink) {
+    mailLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const message = prompt('Type your message here:');
+      if (message && message.trim()) {
+        // Open mailto with the message
+        window.location.href = `mailto:guptakshitij266@gmail.com?subject=Message from Portfolio&body=${encodeURIComponent(message)}`;
+      }
+    });
+  }
+
   console.log('%c👋 Welcome to my portfolio!', 'color: #22d3ee; font-size: 1.5rem; font-weight: bold;');
   console.log('%cBuilt with vanilla HTML, CSS & JavaScript', 'color: #94a3b8; font-size: 1rem;');
   console.log('%cFeel free to explore the code!', 'color: #3b82f6;');
