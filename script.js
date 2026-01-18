@@ -298,15 +298,56 @@
     });
   });
 
-  // Mail link - Open message dialog
+  // Mail link - Open custom message modal
   const mailLink = document.getElementById('mailLink');
-  if (mailLink) {
+  const modal = document.getElementById('messageModal');
+  const closeModal = document.getElementById('closeModal');
+  const cancelBtn = document.getElementById('cancelBtn');
+  const sendBtn = document.getElementById('sendBtn');
+  const messageInput = document.getElementById('messageInput');
+
+  if (mailLink && modal) {
     mailLink.addEventListener('click', (e) => {
       e.preventDefault();
-      const message = prompt('Type your message here:');
-      if (message && message.trim()) {
-        // Open mailto with the message
-        window.location.href = `mailto:guptakshitij266@gmail.com?subject=Message from Portfolio&body=${encodeURIComponent(message)}`;
+      modal.classList.add('active');
+      messageInput.focus();
+    });
+
+    // Close modal handlers
+    const closeModalHandler = () => {
+      modal.classList.remove('active');
+      messageInput.value = '';
+    };
+
+    closeModal.addEventListener('click', closeModalHandler);
+    cancelBtn.addEventListener('click', closeModalHandler);
+    
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModalHandler();
+      }
+    });
+
+    // Send button handler
+    sendBtn.addEventListener('click', () => {
+      const message = messageInput.value.trim();
+      if (message) {
+        // Create temporary link for better mobile compatibility
+        const mailtoLink = document.createElement('a');
+        mailtoLink.href = `mailto:guptakshitij266@gmail.com?subject=Message from Portfolio&body=${encodeURIComponent(message)}`;
+        mailtoLink.target = '_blank';
+        document.body.appendChild(mailtoLink);
+        mailtoLink.click();
+        document.body.removeChild(mailtoLink);
+        closeModalHandler();
+      }
+    });
+
+    // Allow Enter key with Ctrl/Cmd to send
+    messageInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+        sendBtn.click();
       }
     });
   }
