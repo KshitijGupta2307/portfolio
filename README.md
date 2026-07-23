@@ -1,6 +1,6 @@
-# Kshitij Gupta — IoT & Embedded Systems Portfolio
+# Kshitij Gupta — Automation Engineer Portfolio
 
-A modern, interactive portfolio website showcasing IoT and embedded systems projects, experience, and skills.
+A modern, interactive portfolio website showcasing automation engineering, web scraping, and IoT research projects, experience, and skills.
 
 ## 🚀 Features
 
@@ -17,8 +17,8 @@ The portfolio includes:
 
 - **Hero Section**: Introduction with call-to-action buttons and social links
 - **About**: Professional summary and core expertise
-- **Experience**: Current position at IIT Mandi + previous role
-- **Projects**: Featured IoT and embedded systems projects
+- **Experience**: Current Automation Engineer role at Axio Principle + IoT research at IIT Mandi + prior roles
+- **Projects**: Featured automation, web, and IoT projects
 - **Skills**: Technical skills organized by category
 - **Education**: Academic background and certifications
 - **Contact**: Multiple ways to get in touch

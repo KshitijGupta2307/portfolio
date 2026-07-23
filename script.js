@@ -75,8 +75,8 @@
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      // Only prevent default for internal anchor links, not mailto: or tel:
-      if (href && href.startsWith('#')) {
+      // Only prevent default for internal anchor links, not mailto: or tel:, and not a bare "#"
+      if (href && href.startsWith('#') && href.length > 1) {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
